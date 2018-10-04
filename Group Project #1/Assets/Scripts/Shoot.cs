@@ -26,6 +26,11 @@ public class Shoot : MonoBehaviour {
             //destination - start position
             GameObject bullet = (GameObject)Instantiate(prefab,
                 transform.position, Quaternion.identity);
+            //bullet.transform.forward = mousePosition;
+            Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            diff.Normalize();
+            float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+            bullet.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
             bullet.GetComponent<Rigidbody2D>().velocity = shootDir * shootSpeed;
             Destroy(bullet, 0.70f);
 

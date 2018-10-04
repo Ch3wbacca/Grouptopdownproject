@@ -22,10 +22,21 @@ public class HP : MonoBehaviour {
             //HealthText.GetComponent<Text>().text = "Health: " + health;
             healthBar.GetComponent<Slider>().value = health;
         }
+        if (collision.gameObject.tag == "HealthKit")
+
+        {
+            Destroy(collision.gameObject);
+            health++;
+
+
+        }
+
+
+
         if (health <= 0)
         {
             
-            SceneManager.LoadScene("Death scene");
+            SceneManager.LoadScene("DeathScene");
         }
     }
 

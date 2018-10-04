@@ -6,7 +6,7 @@ public class DeathButtons : MonoBehaviour {
 
     public void Continue()
     {
-        SceneManager.LoadScene("Wake up");
+        SceneManager.LoadScene("Town");
     }
     public void Exit()
     {
