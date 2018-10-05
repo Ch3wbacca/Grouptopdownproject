@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HP : MonoBehaviour {
-    public int health = 10;
+   
+ public int health = 10;
     //public Text HealthText;
     public Slider healthBar;
     private void Start()
@@ -28,7 +29,7 @@ public class HP : MonoBehaviour {
             Destroy(collision.gameObject);
             health++;
 
-
+            healthBar.GetComponent<Slider>().value = health;
         }
 
 
@@ -40,6 +41,8 @@ public class HP : MonoBehaviour {
         }
     }
 
+
+    
     
 }
     
