@@ -14,7 +14,7 @@ public class EnemyHP : MonoBehaviour {
         {
             Destroy(gameObject);
             if (health == 0)
-            {  
+            {
                 
                 Destroy(gameObject);
                
