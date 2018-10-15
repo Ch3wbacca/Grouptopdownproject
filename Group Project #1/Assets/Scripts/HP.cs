@@ -9,6 +9,10 @@ public class HP : MonoBehaviour {
  public int health = 10;
     //public Text HealthText;
     public Slider healthBar;
+    private bool OnCollision;
+    private object onCollision;
+
+    
     private void Start()
     {
         //HealthText.GetComponent<Text>().text = "Health: " + health;
@@ -22,6 +26,7 @@ public class HP : MonoBehaviour {
             health--;
             //HealthText.GetComponent<Text>().text = "Health: " + health;
             healthBar.GetComponent<Slider>().value = health;
+
         }
         if (collision.gameObject.tag == "HealthKit")
 
@@ -39,10 +44,16 @@ public class HP : MonoBehaviour {
             
             SceneManager.LoadScene("DeathScene");
         }
+        if (collision.gameObject.tag == "Lava")
+        {
+            health--;
+            healthBar.GetComponent<Slider>().value = health;
+        }
     }
+   
 
 
-    
-    
+
+
 }
     
