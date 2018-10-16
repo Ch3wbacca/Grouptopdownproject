@@ -42,7 +42,7 @@ public class HP : MonoBehaviour {
         if (health <= 0)
         {
             
-            SceneManager.LoadScene("DeathScene");
+            SceneManager.LoadScene("Death Scene");
         }
         if (collision.gameObject.tag == "Lava")
         {

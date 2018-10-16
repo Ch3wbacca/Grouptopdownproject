@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Dungeon syuff_7
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300014, guid: 1d2b37685177cf6448a22492e0132f40, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Transform:
     e00: 1
     e01: 0
